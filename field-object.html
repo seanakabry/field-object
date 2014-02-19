@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<!--
+
+	Field-Object Theme
+
+	by Sean Bryen
+	http://github.com/field-object/field-object
+	Released under the MIT license
+
+-->
+
+<html class="no-js" lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:PortuguesePT}pt{/block:PortuguesePT}{block:PortugueseBR}pt-BR{/block:PortugueseBR}{block:Dutch}nl{/block:Dutch}">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width">
+	<title>{Title}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
+	{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+
+	<link rel="apple-touch-icon" href="{PortraitURL-128}">
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+	<script type="text/javascript" src="http://static.tumblr.com/vmi5hwb/Wgnn0ykdk/jquery.min.js"></script>
+	<script type="text/javascript" src="http://static.tumblr.com/vmi5hwb/2YVn0ykem/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://static.tumblr.com/vmi5hwb/JKzmw5bg3/masonry.pkgd.min.js"></script>
+
+	<!-- jknav with edits/hacks specific to this theme -->
+	<script type="text/javascript" src="http://static.tumblr.com/vmi5hwb/692n0ylfl/jquery.jknav.field-object.js"></script>
+	<script type="text/javascript" src="http://static.tumblr.com/vmi5hwb/r83mw2v6q/jquery.hotkeys.js"></script>
+
+	<!-- Theme-specific js -->
+	<script type="text/javascript" src="http://static.tumblr.com/vmi5hwb/45cn0yqin/field-object.js"></script>
+
+	<meta name="if:Use Masonry on tag pages" content="1">
+	<meta name="if:Use Masonry on search pages" content="1">
+	<meta name="if:Fade in post metadata" content="1">
+	<meta name="if:Show theme link" content="1">
+	<meta name="if:Show keybind legend" content="1">
+
+	<meta name="image:Logo" content=""/>
+
+	<meta name="color:Link highlight" content="#ffff00"/>
+
+	<meta name="text:Max post width" content=""/>
+	<meta name="text:Tag List 1 heading" content=""/>
+	<meta name="text:Tag List 1 comma sep" content=""/>
+	<meta name="text:Tag List 2 heading" content=""/>
+	<meta name="text:Tag List 2 comma sep" content=""/>
+	<meta name="text:Tag List 3 heading" content=""/>
+	<meta name="text:Tag List 3 comma sep" content=""/>
+	<meta name="text:Tag List 4 heading" content=""/>
+	<meta name="text:Tag List 4 comma sep" content=""/>
+	<meta name="text:Tag List 5 heading" content=""/>
+	<meta name="text:Tag List 5 comma sep" content=""/>
+
+	<meta name="text:Link 1 name" content=""/>
+	<meta name="text:Link 1 URL" content=""/>
+	<meta name="text:Link 2 name" content=""/>
+	<meta name="text:Link 2 URL" content=""/>
+	<meta name="text:Link 3 name" content=""/>
+	<meta name="text:Link 3 URL" content=""/>
+	<meta name="text:Link 4 name" content=""/>
+	<meta name="text:Link 4 URL" content=""/>
+	<meta name="text:Link 5 name" content=""/>
+	<meta name="text:Link 5 URL" content=""/>
+
+	<meta name="text:Google Analytics ID" content=""/>
+
+	<link rel="stylesheet" href="http://static.tumblr.com/vmi5hwb/tByn0v8pt/normalize.css" type="text/css" media="all">
+	<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://static.tumblr.com/vmi5hwb/LrHn18b93/field-object.css" type="text/css" media="all">
+
+	<style type="text/css">
+
+		html a:hover,
+		html.no-touch .custom-tags-heading:hover,
+		section.content a:hover,
+		.post-notes a:hover {
+			background-color: {color:Link highlight};
+			}
+
+		{block:IfMaxPostWidth}
+		article.post {
+			max-width: {text:Max post width} !important;
+			}
+		{/block:IfMaxPostWidth}
+
+		{CustomCSS}
+
+	</style>
+
+	<!-- Custom Modernizr 2.7.1 build to detect touch events, html5shiv 3.7 -->
+	<script src="http://static.tumblr.com/vmi5hwb/suBn0v9y6/modernizr.custom.52049.js"></script>
+
+	<!-- Google Analytics -->
+	<script>
+		{block:IfGoogleAnalyticsId}
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', '{text:Google Analytics ID}', 'tumblr.com');
+			ga('send', 'pageview');
+		{/block:IfGoogleAnalyticsId}
+	</script>
+
+</head>
+<body>
+
+	<header>
+
+		<h1 id="logo">
+			{block:IfLogoImage}
+				<a class="image-link" href="{BlogURL}"><img src="{image:Logo}" alt="{Title}" /></a>
+			{/block:IfLogoImage}
+			{block:IfNotLogoImage}
+				<a href="{BlogURL}">{Title}</a>
+			{/block:IfNotLogoImage}
+		</h1>
+
+		{block:Description}<p id="description">{Description}</p>{/block:Description}
+
+		<ul class="menu">
+			<li>
+				<form id="search" action="/search" method="get">
+					<input id="search-query" type="search" placeholder="{lang:Search}" name="q" value="">
+				</form>
+			</li>
+			{block:HasPages}
+				{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}
+			{/block:HasPages}
+			<li><a href="/archive">{lang:Archive}</a></li>
+			{block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
+		</ul>
+
+		{block:IfTagList1CommaSep}
+			<section class="custom-tags" id="custom-tags1">
+				{block:IfTagList1heading}<h2 class="custom-tags-heading">{text:Tag List 1 heading}</h2>{/block:IfTagList1heading}
+				<div class="custom-tags-string">{text:Tag List 1 comma sep}</div>
+			</section>
+		{/block:IfTagList1CommaSep}
+
+		{block:IfTagList2CommaSep}
+			<section class="custom-tags" id="custom-tags2">
+				{block:IfTagList2heading}<h2 class="custom-tags-heading">{text:Tag List 2 heading}</h2>{/block:IfTagList2heading}
+				<div class="custom-tags-string">{text:Tag List 2 comma sep}</div>
+			</section>
+		{/block:IfTagList2CommaSep}
+
+		{block:IfTagList3CommaSep}
+			<section class="custom-tags" id="custom-tags3">
+				{block:IfTagList3heading}<h2 class="custom-tags-heading">{text:Tag List 3 heading}</h2>{/block:IfTagList3heading}
+				<div class="custom-tags-string">{text:Tag List 3 comma sep}</div>
+			</section>
+		{/block:IfTagList3CommaSep}
+
+		{block:IfTagList4CommaSep}
+			<section class="custom-tags" id="custom-tags2">
+				{block:IfTagList4heading}<h2 class="custom-tags-heading">{text:Tag List 4 heading}</h2>{/block:IfTagList4heading}
+				<div class="custom-tags-string">{text:Tag List 4 comma sep}</div>
+			</section>
+		{/block:IfTagList4CommaSep}
+
+		{block:IfTagList5CommaSep}
+			<section class="custom-tags" id="custom-tags3">
+				{block:IfTagList5heading}<h2 class="custom-tags-heading">{text:Tag List 5 heading}</h2>{/block:IfTagList5heading}
+				<div class="custom-tags-string">{text:Tag List 5 comma sep}</div>
+			</section>
+		{/block:IfTagList5CommaSep}
+
+		<ul class="menu" id="link-list">
+			{block:IfLink1Name}
+				<li><a href="{text:Link 1 URL}">{text:Link 1 name}</a></li>
+			{/block:IfLink1Name}
+			{block:IfLink2Name}
+				<li><a href="{text:Link 2 URL}">{text:Link 2 name}</a></li>
+			{/block:IfLink2Name}
+			{block:IfLink3Name}
+				<li><a href="{text:Link 3 URL}">{text:Link 3 name}</a></li>
+			{/block:IfLink3Name}
+			{block:IfLink4Name}
+				<li><a href="{text:Link 4 URL}">{text:Link 4 name}</a></li>
+			{/block:IfLink4Name}
+			{block:IfLink5Name}
+				<li><a href="{text:Link 5 URL}">{text:Link 5 name}</a></li>
+			{/block:IfLink5Name}
+		</ul>
+
+	</header>
+
+	<section id="body" class="{block:IndexPage}index-page{/block:IndexPage}{block:PermalinkPage}permalink-page{/block:PermalinkPage}{block:TagPage}{block:IfUseMasonryOnTagPages} masonry-page {/block:IfUseMasonryOnTagPages} tag-page{/block:TagPage}{block:SearchPage}{block:IfUseMasonryOnSearchPages} masonry-page {/block:IfUseMasonryOnSearchPages} search-page{/block:searchPage}{block:DayPage} day-page{/block:DayPage}{block:IfFadeInPostMetadata} hide-metadata{/block:IfFadeInPostMetadata}">
+
+		{block:PermalinkPage}<a class="jknav-back-target" name="jknav-back-target"></a>{/block:PermalinkPage}
+
+		{block:SearchPage}
+			{block:IfUseMasonryOnSearchPages}
+				<a class="jknav-back-target" name="jknav-back-target"></a>
+			{/block:IfUseMasonryOnSearchPages}
+			{block:NoSearchResults}
+				<p class="result">{lang:No results for SearchQuery 2}</p>
+			{/block:NoSearchResults}
+			<p class="result">{lang:Found SearchResultCount results for SearchQuery 2}</p>
+			{block:IfUseMasonryOnSearchPages}
+				<div id="masonry-container">
+					<img id="load-gif" src="http://static.tumblr.com/vmi5hwb/3pEn0vjrd/loading.gif" />
+			{/block:IfUseMasonryOnSearchPages}
+		{/block:SearchPage}
+
+		{block:TagPage}
+			{block:IfUseMasonryOnTagPages}
+				<a class="jknav-back-target" name="jknav-back-target"></a>
+			{/block:IfUseMasonryOnTagPages}
+			<p class="result">{lang:TagResultCount posts tagged Tag 3}</p>
+			{block:IfUseMasonryOnTagPages}
+				<div id="masonry-container">
+					<img id="load-gif" src="http://static.tumblr.com/vmi5hwb/3pEn0vjrd/loading.gif" />
+			{/block:IfUseMasonryOnTagPages}
+		{/block:TagPage}
+
+		{block:Posts}
+			<article class="post {block:Text}text{/block:Text}{block:Quote}quote{/block:Quote}{block:Link}link{/block:Link}{block:Video}video{/block:Video}{block:Audio}audio{/block:Audio}{block:Photo}photo{/block:Photo}{block:Photoset}photoset{/block:Photoset}{block:Panorama}panorama{/block:Panorama}{block:Chat}chat{/block:Chat}{block:Answer}answer{/block:Answer}" {block:Date}data-post-id="post_{PostID}"{/block:Date}>
+
+				<section class="content">
+
+					{block:Text}
+						{block:Title}<h3 class="post-title">{block:IndexPage}<a href="{Permalink}">{/block:IndexPage}{Title}{block:IndexPage}</a>{/block:IndexPage}</h3>{/block:Title}
+						{Body}
+					{/block:Text}
+
+					{block:Quote}
+						<blockquote class="words {Length}">{Quote}</blockquote>
+						{block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
+					{/block:Quote}
+
+					{block:Link}
+						<h3 class="post-title"><a href="{URL}" {Target}>{Name}</a></h3>
+						{block:Description}
+							<section class="link-description">{Description}</section>
+						{/block:Description}
+					{/block:Link}
+
+					{block:Video}
+						<div class="large-video">{Video-700}</div>
+						{block:TagPage}
+							{block:IfUseMasonryOnTagPages}
+								{Video-250}
+							{/block:IfUseMasonryOnTagPages}
+						{/block:TagPage}
+						{block:SearchPage}
+							{block:IfUseMasonryOnSearchPages}
+								{Video-250}
+							{/block:IfUseMasonryOnSearchPages}
+						{/block:SearchPage}
+						{block:Caption}
+							<section class="caption">{Caption}</section>
+						{/block:Caption}
+					{/block:Video}
+
+					{block:Audio}
+						{AudioPlayerWhite}
+						{block:Caption}
+							<section class="caption">{Caption}</section>
+						{/block:Caption}
+					{/block:Audio}
+
+					{block:Photo}
+						<div class="image-wrapper">
+							{block:IndexPage}<a class="image-link" href="{Permalink}">{/block:IndexPage}
+							{block:PermalinkPage}{block:LinkURL}<a class="image-link" href="{LinkURL}">{/block:LinkURL}{/block:PermalinkPage}
+								<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+							{block:IndexPage}</a>{/block:IndexPage}
+							{block:PermalinkPage}{block:LinkURL}</a>{/block:LinkURL}{/block:PermalinkPage}
+							<div class="image-buttons">
+								<a class="notes-button" href="{Permalink}">{NoteCount}</a>
+								{ReblogButton color="white" size="14"}
+								{LikeButton color="white" size="14"}
+							</div>
+						</div>
+						{block:Caption}
+							<section class="caption">{Caption}</section>
+						{/block:Caption}
+					{/block:Photo}
+
+					{block:Photoset}
+						{block:Photos}
+							<div class="image-wrapper">
+								{block:IndexPage}<a class="image-link" href="{Permalink}">{/block:IndexPage}
+								{block:PermalinkPage}{block:LinkURL}<a class="image-link" href="{LinkURL}">{/block:LinkURL}{/block:PermalinkPage}
+									<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+								{block:IndexPage}</a>{/block:IndexPage}
+								{block:PermalinkPage}{block:LinkURL}</a>{/block:LinkURL}{/block:PermalinkPage}
+								<div class="image-buttons">
+									<a class="notes-button" href="{Permalink}">{NoteCount}</a>
+									{ReblogButton color="white" size="14"}
+									{LikeButton color="white" size="14"}
+								</div>
+							</div>
+							{block:Caption}
+								<section class="caption inset-caption">{Caption}</section>
+							{/block:Caption}
+							<div class="clearfix"></div>
+						{/block:Photos}
+						{block:Caption}
+							<section class="caption">{Caption}</section>
+						{/block:Caption}
+					{/block:Photoset}
+
+					{block:Panorama}
+						<div class="image-wrapper">
+							{block:IndexPage}<a class="image-link" href="{Permalink}">{/block:IndexPage}
+							{block:PermalinkPage}{block:LinkURL}<a class="image-link" href="{LinkURL}">{/block:LinkURL}{/block:PermalinkPage}
+								<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+							{block:IndexPage}</a>{/block:IndexPage}
+							{block:PermalinkPage}{block:LinkURL}</a>{/block:LinkURL}{/block:PermalinkPage}
+							<div class="image-buttons">
+								<a class="notes-button" href="{Permalink}">{NoteCount}</a>
+								{ReblogButton color="white" size="14"}
+								{LikeButton color="white" size="14"}
+							</div>
+						</div>
+						{block:Caption}
+							<section class="caption">{Caption}</section>
+						{/block:Caption}
+					{/block:Panorama}
+
+					{block:Chat}
+						{block:Title}<h3 class="post-title">{block:IndexPage}<a href="{Permalink}">{/block:IndexPage}{Title}{block:IndexPage}</a>{/block:IndexPage}</h3>{/block:Title}
+						<table>
+							{block:Lines}
+							<tr class="{Alt}">
+								{block:Label}<td class="person">{Label}</td>{/block:Label}
+								<td>{Line}</td>
+							</tr>
+							{/block:Lines}
+						</table>
+					{/block:Chat}
+
+					{block:Answer}
+						<div class="asker-portrait">
+							<img src="{AskerPortraitURL-40}">
+						</div>
+						<div class="question-answer">
+							{Asker}
+							<div class="question">{Question}</div>
+							<div class="answer">{Answer}</div>
+						</div>
+					{/block:Answer}
+
+				</section>
+
+				{block:Date}
+					<section class="post-meta">
+
+						<ul class="post-meta-list">
+							<li>
+								<a href="{Permalink}">{TimeAgo}{block:PermalinkPage} ({DayOfMonth} {Month}, {Year}){/block:PermalinkPage}</a>
+							</li>
+							{block:ExternalAudio}
+								<li>
+									<a href="{ExternalAudioURL}">Download</a>
+								</li>
+							{/block:ExternalAudio}
+							{block:PlayCount}
+								<li>
+									<a href="{Permalink}">{PlayCountWithLabel}</a>
+								</li>
+							{/block:PlayCount} 
+							<li>
+								<a href="{Permalink}">{NoteCountWithLabel}</a>
+							</li>
+							{block:ContentSource}
+								<li>
+									<a href="{SourceURL}" title="{SourceTitle}">Source</a>
+								</li>
+							{/block:ContentSource}
+							<li>
+								<a href="{Permalink}">Permalink</a>
+							</li>
+							<li>
+								<a href="{ReblogURL}">Reblog</a>
+							</li>
+						</ul>
+
+						{block:HasTags}
+							<ul class="post-tags-list">
+								{block:Tags}<li><a href="{TagURL}">{Tag}</a></li>{/block:Tags}
+							</ul>
+						{/block:HasTags}
+
+						{block:PermalinkPagination}
+							<ul class="permalinks" id="pagination">
+								{block:PreviousPost}
+									<li><a id="prev" href="{PreviousPost}">{lang:Previous post} (m)</a></li>
+								{/block:PreviousPost}
+								{block:NextPost}
+									<li><a id="next" href="{NextPost}">{lang:Next post} (n)</a?</li>
+								{/block:NextPost}
+							</ul>
+						{/block:PermalinkPagination}
+
+					</section>
+				{/block:Date}
+
+				{block:PostNotes}
+					<section class="post-notes">
+						{PostNotes}
+					</section>
+				{/block:PostNotes}
+
+			</article>
+		{/block:Posts}
+
+		{block:TagPage}
+			{block:IfUseMasonryOnTagPages}
+				</div>
+			{/block:IfUseMasonryOnTagPages}
+		{/block:TagPage}
+
+		{block:SearchPage}
+			{block:IfUseMasonryOnSearchPages}
+				</div>
+			{/block:IfUseMasonryOnSearchPages}
+		{/block:SearchPage}
+
+		{block:Pagination}
+			<ul id="pagination">
+				{block:PreviousPage}<li><a id="prev" href="{PreviousPage}">Back (m)</a></li>{/block:PreviousPage}
+				{block:JumpPagination length="10"}
+					{block:CurrentPage}<li><span class="current">{PageNumber}</span></li>{/block:CurrentPage}
+					{block:JumpPage}<li><a class="jump" href="{URL}">{PageNumber}</a></li>{/block:JumpPage}
+				{/block:JumpPagination}
+				{block:NextPage}<li><a id="next" href="{NextPage}">Next (n)</a></li>{/block:NextPage}
+			</ul>
+			<a id="to-top" href="#top">Back to top (t)</a>
+		{/block:Pagination}
+
+	</section>
+
+	<footer>
+		{block:IfShowThemeLink}<p><a href="http://www.tumblr.com/theme/38401">F-O Theme</a></p>{/block:IfShowThemeLink}
+		{block:IndexPage}
+			{block:IfShowKeybindLegend}
+				<ul class="keybinds">
+					{block:IndexPage}
+						<li><span class="keybind">j / k</span> next / prev post</li>
+						<li><span class="keybind">n / m</span> next / prev page</li>
+					{/block:IndexPage}
+					{block:PermalinkPage}
+						<li><span class="keybind">n / m</span> next / prev post</li>
+					{/block:PermalinkPage}
+				</ul>
+			{/block:IfShowKeybindLegend}
+		{/block:IndexPage}
+	</footer>
+
+</body>
+</html>
