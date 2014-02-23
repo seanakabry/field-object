@@ -37,6 +37,10 @@ This theme doesn't include infinite scroll, but if you're interested in incorpor
 
 # Changelog
 
+#### 23/02/14 - Field-Object v1.0.2
+
+* Added Customize option: Menu absolutely positioned or fixed (with independent scroll if overlong)
+
 #### 19/09/14 - Field-Object v1.0.1
 
 * CSS fixes
