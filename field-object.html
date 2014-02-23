@@ -45,6 +45,9 @@
 
 	<meta name="color:Link highlight" content="#ffff00"/>
 
+	<meta name="select:Menu position" content="fixed-menu" title="Fixed"/>
+	<meta name="select:Menu position" content="absolute-menu" title="Scroll with page"/>
+
 	<meta name="text:Max post width" content=""/>
 	<meta name="text:Tag List 1 heading" content=""/>
 	<meta name="text:Tag List 1 comma sep" content=""/>
@@ -72,7 +75,7 @@
 
 	<link rel="stylesheet" href="http://static.tumblr.com/vmi5hwb/tByn0v8pt/normalize.css" type="text/css" media="all">
 	<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="http://static.tumblr.com/vmi5hwb/LrHn18b93/field-object.css" type="text/css" media="all">
+	<link rel="stylesheet" href="http://static.tumblr.com/vmi5hwb/yK4n1faus/field-object.css" type="text/css" media="all">
 
 	<style type="text/css">
 
@@ -110,7 +113,7 @@
 	</script>
 
 </head>
-<body>
+<body class="{select:Menu position}">
 
 	<header>
 
@@ -190,6 +193,23 @@
 				<li><a href="{text:Link 5 URL}">{text:Link 5 name}</a></li>
 			{/block:IfLink5Name}
 		</ul>
+
+		<footer>
+			{block:IfShowThemeLink}<a href="http://www.tumblr.com/theme/38401">F-O Theme</a>{/block:IfShowThemeLink}
+			{block:IndexPage}
+				{block:IfShowKeybindLegend}
+					<ul class="keybinds">
+						{block:IndexPage}
+							<li><span class="keybind">j / k</span> next / prev post</li>
+							<li><span class="keybind">n / m</span> next / prev page</li>
+						{/block:IndexPage}
+						{block:PermalinkPage}
+							<li><span class="keybind">n / m</span> next / prev post</li>
+						{/block:PermalinkPage}
+					</ul>
+				{/block:IfShowKeybindLegend}
+			{/block:IndexPage}
+		</footer>
 
 	</header>
 
@@ -440,23 +460,6 @@
 		{/block:Pagination}
 
 	</section>
-
-	<footer>
-		{block:IfShowThemeLink}<p><a href="http://www.tumblr.com/theme/38401">F-O Theme</a></p>{/block:IfShowThemeLink}
-		{block:IndexPage}
-			{block:IfShowKeybindLegend}
-				<ul class="keybinds">
-					{block:IndexPage}
-						<li><span class="keybind">j / k</span> next / prev post</li>
-						<li><span class="keybind">n / m</span> next / prev page</li>
-					{/block:IndexPage}
-					{block:PermalinkPage}
-						<li><span class="keybind">n / m</span> next / prev post</li>
-					{/block:PermalinkPage}
-				</ul>
-			{/block:IfShowKeybindLegend}
-		{/block:IndexPage}
-	</footer>
 
 </body>
 </html>
