@@ -41,18 +41,26 @@ a, a:visited {
 		}
 
 header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 140px;
-	padding: 35px 0 0 35px;
+	min-height: 100vh;
+	padding: 0 35px;
 	z-index: 2;
 	overflow: visible;
 	}
 
+	.fixed-menu header {
+		position: fixed;
+		height: 100vh;
+		overflow-x: hidden;
+		overflow-y: auto;
+		}
+
 	#logo {
 		font-size: inherit;
-		margin: 0;
+		margin: 35px 0 0 0;
 		line-height: 1;
 		}
 
@@ -212,6 +220,29 @@ header {
 	#link-list {
 		display: none;
 		}
+
+	footer {
+		line-height: 1rem;
+		margin: 20px -35px 0 -35px;
+		padding: 20px 35px 35px 35px;
+		color: #dfdfdf;
+			transition: color 400ms ease;
+			-webkit-transition: color 400ms ease;
+			-moz-transition: color 400ms ease;
+			-o-transition: color 400ms ease;
+		}
+			
+			footer:hover {
+				color: black;
+					transition: color 200ms ease;
+					-webkit-transition: color 200ms ease;
+					-moz-transition: color 200ms ease;
+					-o-transition: color 200ms ease;
+				}
+
+			html.touch footer {
+				display: none;
+				}
 
 section#body {
 	position: absolute;
@@ -848,31 +879,6 @@ section#body {
 		.masonry-page a#to-top {
 			float: right;
 			margin-right: 47px;
-			}
-
-footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	line-height: 1rem;
-	padding: 70px 70px 35px 35px;
-	color: #dfdfdf;
-		transition: color 200ms ease;
-		-webkit-transition: color 200ms ease;
-		-moz-transition: color 200ms ease;
-		-o-transition: color 200ms ease;
-	}
-		
-		footer:hover {
-			color: black;
-				transition: color 200ms ease;
-				-webkit-transition: color 200ms ease;
-				-moz-transition: color 200ms ease;
-				-o-transition: color 200ms ease;
-			}
-
-		html.touch footer {
-			display: none;
 			}
 
 	.keybinds {
