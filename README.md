@@ -37,6 +37,12 @@ This theme doesn't include infinite scroll, but if you're interested in incorpor
 
 # Changelog
 
+#### 26/02/14 - Field-Object v1.0.3
+
+* Fixed search input overflow issue caused by last update
+* Disabled n/m keybinds when search input in focus
+* Removed loader gif on search pages with no results
+
 #### 23/02/14 - Field-Object v1.0.2
 
 * Added Customize option: Menu absolutely positioned or fixed (with independent scroll if overlong)
