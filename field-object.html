@@ -33,7 +33,7 @@
 	<script type="text/javascript" src="http://static.tumblr.com/vmi5hwb/r83mw2v6q/jquery.hotkeys.js"></script>
 
 	<!-- Theme-specific js -->
-	<script type="text/javascript" src="http://static.tumblr.com/vmi5hwb/45cn0yqin/field-object.js"></script>
+	<script type="text/javascript" src="http://static.tumblr.com/vmi5hwb/eaIn1lqo4/field-object.js"></script>
 
 	<meta name="if:Use Masonry on tag pages" content="1">
 	<meta name="if:Use Masonry on search pages" content="1">
@@ -75,7 +75,7 @@
 
 	<link rel="stylesheet" href="http://static.tumblr.com/vmi5hwb/tByn0v8pt/normalize.css" type="text/css" media="all">
 	<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="http://static.tumblr.com/vmi5hwb/yK4n1faus/field-object.css" type="text/css" media="all">
+	<link rel="stylesheet" href="http://static.tumblr.com/vmi5hwb/qZpn1lqod/field-object.css" type="text/css" media="all">
 
 	<style type="text/css">
 
@@ -213,7 +213,7 @@
 
 	</header>
 
-	<section id="body" class="{block:IndexPage}index-page{/block:IndexPage}{block:PermalinkPage}permalink-page{/block:PermalinkPage}{block:TagPage}{block:IfUseMasonryOnTagPages} masonry-page {/block:IfUseMasonryOnTagPages} tag-page{/block:TagPage}{block:SearchPage}{block:IfUseMasonryOnSearchPages} masonry-page {/block:IfUseMasonryOnSearchPages} search-page{/block:searchPage}{block:DayPage} day-page{/block:DayPage}{block:IfFadeInPostMetadata} hide-metadata{/block:IfFadeInPostMetadata}">
+	<section id="body" class="{block:IndexPage}index-page{/block:IndexPage}{block:PermalinkPage}permalink-page{/block:PermalinkPage}{block:TagPage}{block:IfUseMasonryOnTagPages} masonry-page {/block:IfUseMasonryOnTagPages} tag-page{/block:TagPage}{block:SearchPage}{block:IfUseMasonryOnSearchPages} masonry-page{/block:IfUseMasonryOnSearchPages}{block:NoSearchResults} no-results{/block:NoSearchResults} search-page{/block:searchPage}{block:DayPage} day-page{/block:DayPage}{block:IfFadeInPostMetadata} hide-metadata{/block:IfFadeInPostMetadata}">
 
 		{block:PermalinkPage}<a class="jknav-back-target" name="jknav-back-target"></a>{/block:PermalinkPage}
 
@@ -221,10 +221,12 @@
 			{block:IfUseMasonryOnSearchPages}
 				<a class="jknav-back-target" name="jknav-back-target"></a>
 			{/block:IfUseMasonryOnSearchPages}
-			{block:NoSearchResults}
-				<p class="result">{lang:No results for SearchQuery 2}</p>
-			{/block:NoSearchResults}
-			<p class="result">{lang:Found SearchResultCount results for SearchQuery 2}</p>
+			<p class="result">
+				{block:NoSearchResults}
+					{lang:No results for SearchQuery 2}
+				{/block:NoSearchResults}
+				{lang:Found SearchResultCount results for SearchQuery 2}
+			</p>
 			{block:IfUseMasonryOnSearchPages}
 				<div id="masonry-container">
 					<img id="load-gif" src="http://static.tumblr.com/vmi5hwb/3pEn0vjrd/loading.gif" />
