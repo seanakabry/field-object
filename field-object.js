@@ -113,7 +113,7 @@ $(document).ready(function() {
 					}
 				}
 
-			default: return;
+			return;
 
 			break;
 			case 77: // m
@@ -125,7 +125,7 @@ $(document).ready(function() {
 					}
 				}
 
-			default: return;
+			return;
 
 			break;
 			case 83: // s (Note: char code for s is not consistent across modern browsers. This works for Chrome.)
