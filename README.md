@@ -37,6 +37,10 @@ This theme doesn't include infinite scroll, but if you're interested in incorpor
 
 # Changelog
 
+#### 28/03/14 - Field-Object v1.0.4
+
+* Fixed JS syntax
+
 #### 26/02/14 - Field-Object v1.0.3
 
 * Fixed search input overflow issue caused by last update
