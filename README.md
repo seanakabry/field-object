@@ -13,13 +13,11 @@ A minimal Tumblr theme with keyboard navigation and user-defined tag menus.
 * Keyboard navigation (j/k for next/previous post, n/m for next/previous page)
 * User-defined tag menus (lists of comma separated tags are turned into linked drop-down menus by jQuery)
 
-Group blogs are not supported.
-
 # Installation
 
-For now, please paste the contents of field-object.html into the Edit HTML pane of Tumblr's Customize page, replacing everything. Note that you may lose any information in the custom fields of your current theme.
+[Theme page] (http://www.tumblr.com/theme/38401)
 
-The theme works best when the number of posts per page is set to the maximum (in Customize > Advanced options).
+The theme works best when the number of posts per page is set to the maximum (under Customize > Advanced options).
 
 # Resources
 
