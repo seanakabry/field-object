@@ -1,23 +1,22 @@
 # Field-Object Tumblr Theme
 
-A minimal Tumblr theme with keyboard navigation and user-defined tag menus.
-
-* Front page: distraction free perusal of full-size posts
-* Tag and search pages: masonry thumbnails for efficient browsing
+A minimal Tumblr theme optimised for well-tagged collections, with keyboard navigation, Masonry tag and search pages, and user-defined tag menus.
 
 [Demo blog] (http://field-object-demo.tumblr.com/)
 
 # Features
 
 * HTML5, supports all post types
-* Keyboard navigation (j/k for next/previous post, n/m for next/previous page)
-* User-defined tag menus (lists of comma separated tags are turned into linked drop-down menus by jQuery)
+* User-defined tag menus: Lists of comma-separated tags are parsed by jQuery into grouped drop-down menus.
+* Keyboard navigation: j/k for next/previous post, n/m for next/previous page.
+* Distraction-free home pages: By default, images are displayed at full size and metadata is hidden until the user rolls over a post.
+* Masonry tag and search pages
 
 # Installation
 
-[Theme page] (http://www.tumblr.com/theme/38401)
+[Theme page] (https://www.tumblr.com/theme/39673)
 
-The theme works best when the number of posts per page is set to the maximum (under Customize > Advanced options).
+For best results, set "Posts per page" to the maximum (under "Advanced options" at the bottom of the "Edit Theme" pane).
 
 # Resources
 
@@ -34,6 +33,10 @@ This theme doesn't include infinite scroll, but if you're interested in incorpor
 * [Better Vimeo Embeds 2.1] (http://matthewbuchanan.name/tumblr/vimeo-embeds/)
 
 # Changelog
+
+#### 24/03/15 - Field-Object v1.0.5
+
+* Updated theme link
 
 #### 28/03/14 - Field-Object v1.0.4
 
