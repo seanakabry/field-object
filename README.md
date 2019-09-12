@@ -2,7 +2,7 @@
 
 A minimal Tumblr theme optimised for well-tagged collections, with keyboard navigation, Masonry tag and search pages, and user-defined tag menus.
 
-[Demo blog] (http://field-object-demo.tumblr.com/)
+[Demo blog](http://field-object-demo.tumblr.com/)
 
 # Features
 
@@ -14,7 +14,7 @@ A minimal Tumblr theme optimised for well-tagged collections, with keyboard navi
 
 # Installation
 
-[Theme page] (https://www.tumblr.com/theme/39673)
+[Theme page](https://www.tumblr.com/theme/39673)
 
 For best results, set "Posts per page" to the maximum (under "Advanced options" at the bottom of the "Edit Theme" pane).
 
@@ -22,15 +22,15 @@ For best results, set "Posts per page" to the maximum (under "Advanced options" 
 
 This theme doesn't include infinite scroll, but if you're interested in incorporating it:
 
-* [Using jQuery jknav plugin on dynamically loaded content] (http://blog.yjl.im/2010/09/using-jquery-jknav-plugin-on.html)
+* [Using jQuery jknav plugin on dynamically loaded content](http://blog.yjl.im/2010/09/using-jquery-jknav-plugin-on.html)
 
 # Acknowledgements
 
-* [Tumblr Boilerplate] (http://github.com/davesantos/tumblr-boilerplate)
-* [jQuery] (http://jquery.com/)
-* [Modernizr] (http://modernizr.com/)
-* [jQuery jknav] (http://github.com/livibetter/jquery-jknav)
-* [Better Vimeo Embeds 2.1] (http://matthewbuchanan.name/tumblr/vimeo-embeds/)
+* [Tumblr Boilerplate](http://github.com/davesantos/tumblr-boilerplate)
+* [jQuery](http://jquery.com/)
+* [Modernizr](http://modernizr.com/)
+* [jQuery jknav](http://github.com/livibetter/jquery-jknav)
+* [Better Vimeo Embeds 2.1](http://matthewbuchanan.name/tumblr/vimeo-embeds/)
 
 # Changelog
 
